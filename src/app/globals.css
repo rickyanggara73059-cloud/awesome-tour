@@ -3423,3 +3423,103 @@ h2 {
     padding: 60px 24px 22px !important;
   }
 }
+
+/* Mobile navigation visibility and contrast */
+@media (max-width: 850px) {
+  .nav {
+    z-index: 1000;
+    box-sizing: border-box;
+    width: calc(100% - 28px);
+    min-height: 60px;
+    padding: 8px 10px 8px 18px;
+    background: rgba(15, 35, 38, 0.94) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 11px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+  }
+
+  .nav .logo {
+    flex: 0 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    font-size: 18px;
+  }
+
+  .nav .menuButton {
+    display: flex;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+
+  .nav .menuButton span {
+    width: 18px;
+    height: 2px;
+    margin: 3px 0;
+  }
+
+  .mobileNav {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 18px;
+    background: rgba(15, 35, 38, 0.97);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 11px;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .mobileNav a {
+    display: block;
+    padding: 14px 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .mobileNav a.active {
+    color: #e8dfd1;
+  }
+
+  .mobileNav .mobileNavBooking {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 2px;
+    padding: 14px 15px;
+    border: 0;
+    border-radius: 6px;
+    background: #f4f1ea;
+    color: #12343b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav {
+    width: calc(100% - 20px);
+    padding-left: 12px;
+  }
+
+  .nav .logo {
+    font-size: 16px;
+  }
+}
