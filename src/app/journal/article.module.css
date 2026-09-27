@@ -1,0 +1,154 @@
+﻿.article {
+  background: #f4f1ea;
+  color: #1d2424;
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  min-height: 72vh;
+  overflow: hidden;
+  background: #12343b;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(180deg, rgba(18,52,59,.12), rgba(18,52,59,.78)),
+    url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2200&q=85");
+  background-size: cover;
+  background-position: center;
+}
+
+.heroOverlay {
+  position: relative;
+  z-index: 1;
+  min-height: 72vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 180px 32px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #fff;
+}
+
+.heroOverlay p {
+  margin: 0 0 18px;
+  font-size: 12px;
+  letter-spacing: .18em;
+  font-weight: 700;
+}
+
+.heroOverlay h1 {
+  max-width: 850px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: .96;
+  font-weight: 400;
+  letter-spacing: -.04em;
+}
+
+.heroOverlay span {
+  max-width: 620px;
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255,255,255,.86);
+}
+
+.content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 100px 28px 120px;
+}
+
+.lead {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 0 0 70px;
+  color: #12343b;
+}
+
+.content h2 {
+  margin: 64px 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+  line-height: 1.15;
+  font-weight: 400;
+  color: #12343b;
+}
+
+.content p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #4b5250;
+}
+
+.related {
+  margin-top: 90px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(29,36,36,.2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.related span {
+  font-size: 11px;
+  letter-spacing: .18em;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.related a {
+  color: #12343b;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+}
+
+.related a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .hero,
+  .heroOverlay {
+    min-height: 68vh;
+  }
+
+  .heroOverlay {
+    padding: 140px 22px 48px;
+  }
+
+  .heroOverlay h1 {
+    font-size: clamp(46px, 15vw, 72px);
+  }
+
+  .heroOverlay span {
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 70px 22px 90px;
+  }
+
+  .lead {
+    font-size: 23px;
+    margin-bottom: 50px;
+  }
+
+  .content h2 {
+    font-size: 30px;
+    margin-top: 52px;
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}

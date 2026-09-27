@@ -1,0 +1,411 @@
+﻿.page {
+  background: #f4f1ea;
+  color: #1d2424;
+}
+
+.hero {
+  position: relative;
+  min-height: 86vh;
+  overflow: hidden;
+  background: #12343b;
+  color: #fff;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  background:
+    url("https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=2400&q=90")
+    center / cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18, 52, 59, 0.2) 0%,
+      rgba(18, 52, 59, 0.18) 40%,
+      rgba(18, 52, 59, 0.88) 100%
+    );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  min-height: 86vh;
+  margin: 0 auto;
+  padding: 150px 32px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.eyebrow {
+  margin: 0 0 22px;
+  font-size: 11px;
+  letter-spacing: .18em;
+  font-weight: 700;
+}
+
+.hero h1 {
+  max-width: 1000px;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(64px, 10vw, 130px);
+  line-height: .86;
+  font-weight: 400;
+  letter-spacing: -.055em;
+}
+
+.hero h1 em {
+  font-weight: 400;
+}
+
+.heroDescription {
+  max-width: 530px;
+  margin: 32px 0 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.82);
+}
+
+.heroMeta {
+  position: absolute;
+  z-index: 3;
+  left: 32px;
+  right: 32px;
+  bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: .16em;
+  color: rgba(255,255,255,.7);
+}
+
+.intro {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 125px 32px 110px;
+}
+
+.sectionLabel,
+.sectionLabelLight {
+  font-size: 11px;
+  letter-spacing: .18em;
+  font-weight: 700;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  margin-top: 58px;
+}
+
+.intro h2,
+.journey h2,
+.cta h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(52px, 6vw, 82px);
+  line-height: .95;
+  font-weight: 400;
+  letter-spacing: -.045em;
+  color: #12343b;
+}
+
+.intro h2 em,
+.journey h2 em,
+.cta h2 em {
+  font-weight: 400;
+}
+
+.introCopy {
+  max-width: 600px;
+}
+
+.introCopy p {
+  margin: 0 0 26px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #5b625f;
+}
+
+.introCopy .lead {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  line-height: 1.55;
+  color: #12343b;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1180px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(29,36,36,.18);
+  border-bottom: 1px solid rgba(29,36,36,.18);
+}
+
+.facts > div {
+  padding: 28px 30px;
+  border-right: 1px solid rgba(29,36,36,.18);
+}
+
+.facts > div:last-child {
+  border-right: 0;
+}
+
+.facts span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 10px;
+  letter-spacing: .16em;
+  color: #737975;
+}
+
+.facts strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-weight: 400;
+  color: #12343b;
+}
+
+.experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 120px;
+  background: #12343b;
+  color: white;
+}
+
+.experienceImage {
+  min-height: 700px;
+  background:
+    url("https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=1800&q=90")
+    center / cover;
+}
+
+.experienceContent {
+  padding: 100px clamp(32px, 7vw, 110px);
+}
+
+.sectionLabelLight {
+  color: rgba(255,255,255,.55);
+}
+
+.experience h2 {
+  margin: 50px 0 75px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(54px, 6vw, 82px);
+  line-height: .94;
+  font-weight: 400;
+}
+
+.experience h2 em {
+  font-weight: 400;
+}
+
+.experienceList {
+  border-top: 1px solid rgba(255,255,255,.18);
+}
+
+.experienceList > div {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+}
+
+.experienceList span {
+  font-size: 10px;
+  color: rgba(255,255,255,.42);
+  letter-spacing: .12em;
+}
+
+.experienceList strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.journey {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 130px 32px;
+}
+
+.journeyHeader {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 80px;
+  align-items: end;
+}
+
+.journeyHeader > p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #626865;
+}
+
+.journey h2 {
+  margin-top: 26px;
+}
+
+.journeyCard {
+  margin-top: 75px;
+  padding: 35px 0;
+  border-top: 1px solid rgba(29,36,36,.25);
+  border-bottom: 1px solid rgba(29,36,36,.25);
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 60px;
+  align-items: center;
+}
+
+.journeyCard > div span {
+  font-size: 10px;
+  letter-spacing: .16em;
+  color: #747a76;
+}
+
+.journeyCard h3 {
+  margin: 12px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #12343b;
+}
+
+.journeyCard > strong {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.journeyCard a {
+  color: #12343b;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.journeyCard a span {
+  margin-left: 8px;
+}
+
+.cta {
+  padding: 130px 32px 150px;
+  text-align: center;
+  background: #e8dfd1;
+}
+
+.cta h2 {
+  margin: 38px auto 52px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 25px;
+  background: #12343b;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.footer {
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #12343b;
+  color: rgba(255,255,255,.65);
+  font-size: 10px;
+  letter-spacing: .14em;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .hero,
+  .heroContent {
+    min-height: 76vh;
+  }
+
+  .heroContent {
+    padding: 140px 22px 85px;
+  }
+
+  .hero h1 {
+    font-size: clamp(58px, 16vw, 88px);
+  }
+
+  .heroMeta {
+    left: 22px;
+    right: 22px;
+  }
+
+  .heroMeta span:last-child {
+    display: none;
+  }
+
+  .intro,
+  .journey {
+    padding: 80px 22px;
+  }
+
+  .introGrid,
+  .experience,
+  .journeyHeader {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .facts {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 22px;
+  }
+
+  .facts > div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .facts > div:nth-child(-n+2) {
+    border-bottom: 1px solid rgba(29,36,36,.18);
+  }
+
+  .experience {
+    margin-top: 80px;
+  }
+
+  .experienceImage {
+    min-height: 480px;
+  }
+
+  .experienceContent {
+    padding: 75px 22px;
+  }
+
+  .journeyCard {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .cta {
+    padding: 90px 22px 110px;
+  }
+
+  .footer {
+    padding: 25px 22px;
+  }
+}
