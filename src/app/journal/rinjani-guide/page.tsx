@@ -43,8 +43,9 @@ export default function RinjaniGuide() {
 
         <div className={styles.related}>
           <span>EXPLORE</span>
-          <Link href="/destinations/rinjani">Discover Rinjani →</Link>
-          <Link href="/tours/rinjani-2d1n">Explore the Rinjani journey →</Link>
+          <Link href="/tours/rinjani-2d1n">
+            Explore the Rinjani 2D1N tour →
+          </Link>
         </div>
       </article>
     </main>

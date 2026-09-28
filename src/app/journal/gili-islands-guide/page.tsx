@@ -42,8 +42,9 @@ export default function GiliIslandsGuide() {
 
         <div className={styles.related}>
           <span>EXPLORE</span>
-          <Link href="/destinations">Discover the Gili Islands →</Link>
-          <Link href="/tours/gili-island-day-trip">Explore the Gili journey →</Link>
+          <Link href="/tours/gili-island-day-trip">
+            Explore the Gili Island Day Trip →
+          </Link>
         </div>
       </article>
     </main>

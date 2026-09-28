@@ -44,8 +44,9 @@ export default function LombokTravelGuide() {
 
         <div className={styles.related}>
           <span>EXPLORE</span>
-          <Link href="/destinations">Discover Lombok destinations →</Link>
-          <Link href="/tours/lombok-3d2n">Explore the Lombok journey →</Link>
+          <Link href="/tours/lombok-island-5d4n">
+            Explore the Lombok Island 5D4N tour →
+          </Link>
         </div>
       </article>
     </main>

@@ -10,17 +10,17 @@ const destinations = [
       "Mountain landscapes, village roads and unforgettable journeys around Mount Rinjani.",
     image:
       "https://images.unsplash.com/photo-1741845303120-61daa348ecd0?auto=format&fit=crop&w=1800&q=90",
-    slug: "rinjani",
+    tourHref: "/tours/rinjani-2d1n",
   },
   {
     number: "02",
     name: "Gili Islands",
-    region: "West Lombok",
+    region: "North Lombok",
     description:
       "Clear water, coral gardens and slow island days across Lombok's famous islands.",
     image:
       "https://images.unsplash.com/photo-1530658432962-05f34932eb47?auto=format&fit=crop&w=1600&q=90",
-    slug: "gili-islands",
+    tourHref: "/tours/gili-island-day-trip",
   },
   {
     number: "03",
@@ -30,7 +30,7 @@ const destinations = [
       "Open beaches, coastal roads, surf and the distinctive character of southern Lombok.",
     image:
       "https://images.unsplash.com/photo-1532506182952-9aaa2633962a?auto=format&fit=crop&w=1600&q=90",
-    slug: "mandalika",
+    tourHref: "/tours/lombok-island-4d3n",
   },
 ];
 
@@ -90,8 +90,8 @@ export default function DestinationsPage() {
         <div className={styles.destinationList}>
           {destinations.map((destination) => (
             <Link
-              key={destination.slug}
-              href={`/destinations/${destination.slug}`}
+              key={destination.tourHref}
+              href={destination.tourHref}
               className={styles.destination}
             >
               <div className={styles.destinationImage}>

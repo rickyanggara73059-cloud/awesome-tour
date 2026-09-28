@@ -3,6 +3,7 @@ import { tours, type Tour } from "./tour-data";
 import { tourImages } from "./tour-images";
 
 export default function TourDetail({ tour }: { tour: Tour }) {
+  const image = tourImages[tour.slug];
   const facts = [
     ["Duration", tour.duration],
     ["Destination", tour.location],
@@ -14,7 +15,7 @@ export default function TourDetail({ tour }: { tour: Tour }) {
 
   return (
     <main className="tourDetailPage">
-      <section className="tourDetailHero" style={{ backgroundImage: `url("${tourImages[tour.slug].src}?auto=format&fit=crop&w=2400&q=90")` }}>
+      <section className="tourDetailHero" style={{ backgroundImage: `url("${image.src}?auto=format&fit=crop&w=2400&q=90")` }}>
         <div className="tourDetailHeroOverlay" />
         <div className="tourDetailHeroContent">
           <Link href="/tours" className="tourBackLink">← ALL JOURNEYS</Link>
@@ -27,6 +28,33 @@ export default function TourDetail({ tour }: { tour: Tour }) {
           </div>
         </div>
       </section>
+
+      {image.credit && (
+        <p
+          style={{
+            margin: 0,
+            padding: "0.65rem 24px",
+            background: "#f4f1ea",
+            color: "#1d2424",
+            fontSize: "0.7rem",
+            textAlign: "right",
+          }}
+        >
+          Photo: {" "}
+          <a href={image.source} target="_blank" rel="noreferrer">
+            {image.credit.author}
+          </a>
+          {" · "}
+          <a
+            href={image.credit.licenseUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {image.credit.license}
+          </a>
+          {" · Unmodified"}
+        </p>
+      )}
 
       <section className="tourStory">
         <div className="tourStoryLabel">
@@ -67,14 +95,17 @@ export default function TourDetail({ tour }: { tour: Tour }) {
         </div>
       </section>
 
-      <section className="includedSection">
-        <div className="includedColumn">
-          <p className="eyebrow">INCLUDED</p>
-          <h2>Tour inclusions.</h2>
-          <ul>
-            {tour.included.map((item) => <li key={item}><span>+</span>{item}</li>)}
-          </ul>
-        </div>
+      {(tour.included.length > 0 || tour.mealNotes) && (
+        <section className="includedSection">
+          {tour.included.length > 0 && (
+            <div className="includedColumn">
+              <p className="eyebrow">INCLUDED</p>
+              <h2>Tour inclusions.</h2>
+              <ul>
+                {tour.included.map((item) => <li key={item}><span>+</span>{item}</li>)}
+              </ul>
+            </div>
+          )}
         {tour.mealNotes && (
           <div className="excludedColumn">
             <p className="eyebrow">MEAL NOTES & EXCLUSIONS</p>
@@ -83,7 +114,8 @@ export default function TourDetail({ tour }: { tour: Tour }) {
             </ul>
           </div>
         )}
-      </section>
+        </section>
+      )}
 
       <section className="tourBookingCta">
         <p className="eyebrow">PLAN YOUR JOURNEY</p>

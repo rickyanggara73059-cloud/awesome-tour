@@ -20,7 +20,10 @@ export default function RinjaniPage() {
   return (
     <main className={styles.page}>
       <section className={styles.hero}>
-        <div className={styles.heroImage} />
+        <div
+          className={styles.heroImage}
+          style={{ backgroundImage: "url('/images/destinations/rinjani/rinjani01.jpg')" }}
+        />
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroContent}>
@@ -92,7 +95,10 @@ export default function RinjaniPage() {
       </section>
 
       <section className={styles.experience}>
-        <div className={styles.experienceImage} />
+        <div
+          className={styles.experienceImage}
+          style={{ backgroundImage: "url('/images/destinations/rinjani/rinjani02.jpg')" }}
+        />
 
         <div className={styles.experienceContent}>
           <p className={styles.sectionLabelLight}>02 — EXPERIENCES</p>
@@ -134,14 +140,14 @@ export default function RinjaniPage() {
 
         <div className={styles.journeyCard}>
           <div>
-            <span>02 DAYS / 01 NIGHT</span>
-            <h3>Rinjani Mountain Journey</h3>
+            <span>THE RINJANI TOUR</span>
+            <h3>Explore the mountain journey.</h3>
           </div>
 
-          <strong>From Rp 1.850.000</strong>
+          <strong>Itinerary and booking details</strong>
 
           <Link href="/tours/rinjani-2d1n">
-            View journey <span>→</span>
+            View tour <span>→</span>
           </Link>
         </div>
       </section>

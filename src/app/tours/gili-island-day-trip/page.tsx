@@ -42,19 +42,19 @@ const excluded = [
 
 const gallery = [
   {
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=85",
+    src: "/images/expeditions/gili-trawangan-drone.jpg",
     alt: "Tropical beach",
   },
   {
-    src: "https://images.unsplash.com/photo-1544550285-f813152fb2fd?auto=format&fit=crop&w=1600&q=85",
+    src: "/images/about/gili-air.jpg",
     alt: "Tropical ocean",
   },
   {
-    src: "https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=1600&q=85",
+    src: "/images/gallery/gili-trawangan-aerial.jpg",
     alt: "Island coastline",
   },
   {
-    src: "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1600&q=85",
+    src: "/images/expeditions/gili-trawangan-drone.jpg",
     alt: "Clear tropical water",
   },
 ];
@@ -62,7 +62,12 @@ const gallery = [
 export default function GiliIslandPage() {
   return (
     <main className="tourDetailPage">
-      <section className="tourDetailHero">
+      <section
+        className="tourDetailHero"
+        style={{
+          backgroundImage: 'url("/images/expeditions/gili-trawangan-drone.jpg")',
+        }}
+      >
         <div className="tourDetailHeroOverlay" />
 
         <div className="tourDetailHeroContent">

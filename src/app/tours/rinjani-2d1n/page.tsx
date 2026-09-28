@@ -42,19 +42,19 @@ const excluded = [
 
 const gallery = [
   {
-    src: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=85",
+    src: "/images/destinations/rinjani/rinjani01.jpg",
     alt: "Mountain landscape",
   },
   {
-    src: "https://images.unsplash.com/photo-1464278533981-50106e6176b1?auto=format&fit=crop&w=1600&q=85",
+    src: "/images/destinations/rinjani/rinjani02.jpg",
     alt: "Mountain trail",
   },
   {
-    src: "https://images.unsplash.com/photo-1486911278844-a81c5267e227?auto=format&fit=crop&w=1600&q=85",
+    src: "/images/destinations/rinjani/rinjani04.jpg",
     alt: "Mountain sunrise",
   },
   {
-    src: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1600&q=85",
+    src: "/images/destinations/rinjani/rinjani05.jpg",
     alt: "Mountain landscape at sunrise",
   },
 ];
@@ -62,7 +62,12 @@ const gallery = [
 export default function RinjaniPage() {
   return (
     <main className="tourDetailPage">
-      <section className="tourDetailHero">
+      <section
+        className="tourDetailHero"
+        style={{
+          backgroundImage: 'url("/images/destinations/rinjani/rinjani04.jpg")',
+        }}
+      >
         <div className="tourDetailHeroOverlay" />
 
         <div className="tourDetailHeroContent">
