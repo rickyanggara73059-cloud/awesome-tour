@@ -97,7 +97,7 @@ export default function Home() {
             </p>
 
             <p className="bodyText">
-              Awesome Tour creates thoughtful journeys across Lombok and
+              Lombok Awesome Tour creates thoughtful journeys across Lombok and
               beyond — combining local knowledge, carefully selected
               experiences and the freedom to explore at your own pace.
             </p>
@@ -264,7 +264,7 @@ export default function Home() {
         <div className="footerTop">
           <div>
             <a href="/" className="logo footerLogo">
-              AWESOME<span>TOUR</span>
+              LOMBOK AWESOME<span>TOUR</span>
             </a>
             <p>
               Thoughtful journeys across
@@ -298,7 +298,7 @@ export default function Home() {
         </div>
 
         <div className="footerBottom">
-          <span>© {new Date().getFullYear()} Awesome Tour</span>
+          <span>© {new Date().getFullYear()} Lombok Awesome Tour</span>
           <span>LOMBOK · INDONESIA</span>
         </div>
       </footer>

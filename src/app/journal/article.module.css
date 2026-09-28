@@ -16,9 +16,33 @@
   inset: 0;
   background-image:
     linear-gradient(180deg, rgba(18,52,59,.12), rgba(18,52,59,.78)),
-    url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=2200&q=85");
+    url("/images/expeditions/rinjani-mountain.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.lombokGuideHeroImage {
+  background-image:
+    linear-gradient(180deg, rgba(18,52,59,.12), rgba(18,52,59,.78)),
+    url("/images/expeditions/rinjani-mountain.jpg");
+}
+
+.rinjaniHeroImage {
+  background-image:
+    linear-gradient(180deg, rgba(18,52,59,.12), rgba(18,52,59,.78)),
+    url("/images/expeditions/rinjani-mountain.jpg");
+}
+
+.giliHeroImage {
+  background-image:
+    linear-gradient(180deg, rgba(18,52,59,.12), rgba(18,52,59,.78)),
+    url("/images/expeditions/gili-trawangan-drone.jpg");
+}
+
+.southLombokHeroImage {
+  background-image:
+    linear-gradient(180deg, rgba(18,52,59,.12), rgba(18,52,59,.78)),
+    url("/images/journal/south-lombok-tanjung-aan.jpg");
 }
 
 .heroOverlay {

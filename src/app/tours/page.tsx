@@ -5,9 +5,9 @@ import { tours } from "./tour-data";
 import { tourImages } from "./tour-images";
 
 export const metadata = {
-  title: "Lombok Tours | Awesome Tour",
+  title: "Lombok Tours | Lombok Awesome Tour",
   description:
-    "Explore Lombok Island 5D4N, Lombok Island 4D3N and North Lombok 3D2N with Awesome Tour.",
+    "Explore Lombok Island 5D4N, Lombok Island 4D3N and North Lombok 3D2N with Lombok Awesome Tour.",
 };
 
 export default function ToursPage() {

@@ -1,9 +1,9 @@
 ﻿import Link from "next/link";
 
 export const metadata = {
-  title: "Lombok Island Escape — 3 Days / 2 Nights | Awesome Tour",
+  title: "Lombok Island Escape — 3 Days / 2 Nights | Lombok Awesome Tour",
   description:
-    "Experience Lombok through beaches, waterfalls, local culture and the quieter side of the island with Awesome Tour.",
+    "Experience Lombok through beaches, waterfalls, local culture and the quieter side of the island with Lombok Awesome Tour.",
 };
 
 const itinerary = [

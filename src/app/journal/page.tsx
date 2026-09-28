@@ -10,8 +10,7 @@ const stories = [
     subtitle: "Where should you begin?",
     description:
       "An introduction to Lombok's landscapes, regions and the places worth taking your time to explore.",
-    image:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=90",
+    image: "/images/expeditions/rinjani-mountain.jpg",
   },
   {
     number: "02",
@@ -21,8 +20,7 @@ const stories = [
     subtitle: "More than a mountain.",
     description:
       "A closer look at Mount Rinjani, the landscapes around it and what makes the journey special.",
-    image:
-      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1800&q=90",
+    image: "/images/expeditions/rinjani-mountain.jpg",
   },
   {
     number: "03",
@@ -32,8 +30,7 @@ const stories = [
     subtitle: "Three islands, different moods.",
     description:
       "Discover the character of the Gili Islands, from quiet mornings in the water to slow afternoons by the coast.",
-    image:
-      "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1800&q=90",
+    image: "/images/expeditions/gili-trawangan-drone.jpg",
   },
   {
     number: "04",
@@ -43,13 +40,12 @@ const stories = [
     subtitle: "Follow the road south.",
     description:
       "Open beaches, coastal roads, surf and the changing landscape of southern Lombok.",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=90",
+    image: "/images/journal/south-lombok-tanjung-aan.jpg",
   },
 ];
 
 export const metadata = {
-  title: "Journal — Awesome Tour",
+  title: "Journal — Lombok Awesome Tour",
   description:
     "Travel stories, destination guides and local perspectives from Lombok.",
 };

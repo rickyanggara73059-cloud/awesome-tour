@@ -35,7 +35,7 @@ const destinations = [
 ];
 
 export const metadata = {
-  title: "Destinations — Awesome Tour",
+  title: "Destinations — Lombok Awesome Tour",
   description:
     "Discover Rinjani, Gili Islands, Mandalika and the landscapes of Lombok.",
 };

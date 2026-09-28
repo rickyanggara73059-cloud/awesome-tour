@@ -1,9 +1,10 @@
 ﻿import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export const metadata: Metadata = {
-  title: "Awesome Tour — Discover Lombok Beyond the Ordinary",
+  title: "Lombok Awesome Tour — Discover Lombok Beyond the Ordinary",
   description:
     "Thoughtful journeys across Lombok and West Nusa Tenggara. Explore Rinjani, Gili Islands, Mandalika and authentic local experiences.",
   keywords: [
@@ -24,7 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body><Navbar />{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        <FloatingWhatsApp />
+      </body>
     </html>
   );
 }

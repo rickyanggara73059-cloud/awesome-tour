@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <nav className="nav">
       <Link href="/" className="logo">
-        AWESOME<span>TOUR</span>
+        LOMBOK AWESOME<span>TOUR</span>
       </Link>
 
       <div className="navLinks">
@@ -57,6 +57,14 @@ export default function Navbar() {
           className={isActive("/journal") ? "active" : ""}
         >
           Journal
+        </Link>
+
+        <Link
+          href="/gallery"
+          className={isActive("/gallery") ? "active" : ""}
+          aria-current={isActive("/gallery") ? "page" : undefined}
+        >
+          Gallery
         </Link>
 
         <Link
@@ -96,6 +104,7 @@ export default function Navbar() {
           <Link href="/tours" className={isActive("/tours") ? "active" : ""}>Tours</Link>
           <Link href="/experiences" className={isActive("/experiences") ? "active" : ""}>Experiences</Link>
           <Link href="/journal" className={isActive("/journal") ? "active" : ""}>Journal</Link>
+          <Link href="/gallery" className={isActive("/gallery") ? "active" : ""} aria-current={isActive("/gallery") ? "page" : undefined}>Gallery</Link>
           <Link href="/about" className={isActive("/about") ? "active" : ""}>About</Link>
           <Link href="/contact" className={isActive("/contact") ? "active" : ""}>Contact</Link>
           <Link href="/booking" className="mobileNavBooking">Book a trip <span>↗</span></Link>

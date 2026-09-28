@@ -5,7 +5,7 @@ export default function RinjaniGuide() {
   return (
     <main className={styles.article}>
       <header className={styles.hero}>
-        <div className={styles.heroImage} />
+        <div className={`${styles.heroImage} ${styles.rinjaniHeroImage}`} />
         <div className={styles.heroOverlay}>
           <p>JOURNAL · RINJANI</p>
           <h1>Understanding Rinjani</h1>

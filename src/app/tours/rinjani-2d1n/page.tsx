@@ -1,7 +1,7 @@
 ﻿import Link from "next/link";
 
 export const metadata = {
-  title: "Rinjani Mountain Journey — 2 Days / 1 Night | Awesome Tour",
+  title: "Rinjani Mountain Journey — 2 Days / 1 Night | Lombok Awesome Tour",
   description:
     "A two-day Rinjani mountain journey through Lombok's dramatic highlands, viewpoints and volcanic landscapes.",
 };

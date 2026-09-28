@@ -5,7 +5,7 @@ export default function GiliIslandsGuide() {
   return (
     <main className={styles.article}>
       <header className={styles.hero}>
-        <div className={styles.heroImage} />
+        <div className={`${styles.heroImage} ${styles.giliHeroImage}`} />
         <div className={styles.heroOverlay}>
           <p>JOURNAL · GILI ISLANDS</p>
           <h1>The Gili Islands</h1>

@@ -5,7 +5,7 @@ export default function SouthLombokGuide() {
   return (
     <main className={styles.article}>
       <header className={styles.hero}>
-        <div className={styles.heroImage} />
+        <div className={`${styles.heroImage} ${styles.southLombokHeroImage}`} />
         <div className={styles.heroOverlay}>
           <p>JOURNAL · SOUTH LOMBOK</p>
           <h1>The Southern Coast</h1>

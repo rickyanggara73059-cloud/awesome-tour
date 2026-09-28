@@ -54,7 +54,7 @@ export default function BookingPage() {
     if (!tour || travelerCount < getMinimumTravelers(tour)) return;
 
     const message = [
-      "Hello Awesome Tour,",
+      "Hello Lombok Awesome Tour,",
       "",
       "I would like to make a booking request:",
       "",
@@ -74,7 +74,7 @@ export default function BookingPage() {
 
     setSubmitted(true);
     window.location.href =
-      `https://wa.me/6282147314910?text=${encodeURIComponent(message)}`;
+      `https://wa.me/6287816231153?text=${encodeURIComponent(message)}`;
   }
 
   function handleTourChange(slug: string) {

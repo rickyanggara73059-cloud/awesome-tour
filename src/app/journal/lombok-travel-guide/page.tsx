@@ -5,7 +5,7 @@ export default function LombokTravelGuide() {
   return (
     <main className={styles.article}>
       <header className={styles.hero}>
-        <div className={styles.heroImage} />
+        <div className={`${styles.heroImage} ${styles.lombokGuideHeroImage}`} />
         <div className={styles.heroOverlay}>
           <p>JOURNAL · LOMBOK</p>
           <h1>A First Guide to Lombok</h1>

@@ -2,9 +2,9 @@
 import styles from "./contact.module.css";
 
 export const metadata = {
-  title: "Contact — Awesome Tour",
+  title: "Contact — Lombok Awesome Tour",
   description:
-    "Contact Awesome Tour to plan your Lombok and West Nusa Tenggara journey.",
+    "Contact Lombok Awesome Tour to plan your Lombok and West Nusa Tenggara journey.",
 };
 
 export default function ContactPage() {
@@ -15,7 +15,7 @@ export default function ContactPage() {
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroContent}>
-          <p className={styles.eyebrow}>CONTACT AWESOME TOUR</p>
+          <p className={styles.eyebrow}>CONTACT LOMBOK AWESOME TOUR</p>
 
           <h1>
             Let&apos;s plan
@@ -183,7 +183,7 @@ export default function ContactPage() {
 
       <footer className={styles.footer}>
         <Link href="/" className={styles.logo}>
-          AWESOME<span>TOUR</span>
+          LOMBOK AWESOME<span>TOUR</span>
         </Link>
 
         <span>LOMBOK · INDONESIA</span>

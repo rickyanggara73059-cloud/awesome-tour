@@ -42,7 +42,7 @@ const experiences = [
 ];
 
 export const metadata = {
-  title: "Experiences — Awesome Tour",
+  title: "Experiences — Lombok Awesome Tour",
   description:
     "Discover mountain, island, cultural and coastal experiences across Lombok.",
 };

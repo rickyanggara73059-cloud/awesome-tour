@@ -18,7 +18,7 @@
 .heroImage {
   position: absolute;
   inset: 0;
-  background-image: url("https://images.unsplash.com/photo-1725163938260-68e159b65fdc?auto=format&fit=crop&w=2200&q=90");
+  background-image: url("/images/journal/lombok-coastal-road.jpg");
   background-size: cover;
   background-position: center;
 }

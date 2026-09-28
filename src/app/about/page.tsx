@@ -2,9 +2,9 @@
 import styles from "./about.module.css";
 
 export const metadata = {
-  title: "About Us — Awesome Tour",
+  title: "About Us — Lombok Awesome Tour",
   description:
-    "Discover the story, philosophy and local approach behind Awesome Tour in Lombok, Indonesia.",
+    "Discover the story, philosophy and local approach behind Lombok Awesome Tour in Indonesia.",
 };
 
 const places = [
@@ -15,8 +15,7 @@ const places = [
     description:
       "Highland roads, volcanic landscapes and journeys shaped by the presence of Mount Rinjani.",
     href: "/destinations/rinjani",
-    image:
-      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1600&q=90",
+    image: "/images/about/rinjani-mountain.jpg",
   },
   {
     number: "02",
@@ -25,8 +24,7 @@ const places = [
     description:
       "Clear water, quiet mornings and a slower rhythm across Lombok's famous island trio.",
     href: "/destinations",
-    image:
-      "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1600&q=90",
+    image: "/images/about/gili-air.jpg",
   },
   {
     number: "03",
@@ -35,8 +33,7 @@ const places = [
     description:
       "A changing southern coastline where beaches, local communities and new energy meet.",
     href: "/destinations",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=90",
+    image: "/images/about/mandalika-coast.jpg",
   },
 ];
 
@@ -48,7 +45,7 @@ export default function AboutPage() {
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroContent}>
-          <p>ABOUT AWESOME TOUR · LOMBOK</p>
+          <p>ABOUT LOMBOK AWESOME TOUR · LOMBOK</p>
 
           <h1>
             Travel
@@ -89,7 +86,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              Awesome Tour was created to help travellers experience that
+              Lombok Awesome Tour was created to help travellers experience that
               side of Lombok. We connect visitors with carefully selected
               journeys, local experiences and places that deserve more than
               a quick stop.
@@ -212,7 +209,7 @@ export default function AboutPage() {
 
       <footer className={styles.footer}>
         <Link href="/" className={styles.logo}>
-          AWESOME<span>TOUR</span>
+          LOMBOK AWESOME<span>TOUR</span>
         </Link>
 
         <span>LOMBOK · INDONESIA</span>

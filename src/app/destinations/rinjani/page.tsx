@@ -2,7 +2,7 @@
 import styles from "./rinjani.module.css";
 
 export const metadata = {
-  title: "Rinjani — Awesome Tour",
+  title: "Rinjani — Lombok Awesome Tour",
   description:
     "Explore Mount Rinjani, Sembalun, Senaru and mountain experiences in Lombok.",
 };

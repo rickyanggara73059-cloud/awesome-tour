@@ -1,7 +1,7 @@
 ﻿import Link from "next/link";
 
 export const metadata = {
-  title: "Gili Island Experience — 1 Day | Awesome Tour",
+  title: "Gili Island Experience — 1 Day | Lombok Awesome Tour",
   description:
     "A relaxed day around the Gili Islands with snorkeling, clear water and island time.",
 };
