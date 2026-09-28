@@ -3,24 +3,24 @@
 import { FormEvent, useMemo, useState } from "react";
 import Link from "next/link";
 import styles from "./booking.module.css";
+import { tours, type Tour } from "../tours/tour-data";
 
-const tours = [
-  {
-    name: "Lombok Island Escape",
-    duration: "3 Days / 2 Nights",
-    price: 2500000,
-  },
-  {
-    name: "Rinjani Mountain Journey",
-    duration: "2 Days / 1 Night",
-    price: 1850000,
-  },
-  {
-    name: "Gili Island Experience",
-    duration: "1 Day",
-    price: 750000,
-  },
-];
+function getPriceAmount(price: string) {
+  const priceInThousands = price.match(/IDR\s*([\d.]+)\s*K\b/i);
+  if (priceInThousands) {
+    return Number(priceInThousands[1].replace(/\./g, "")) * 1000;
+  }
+
+  const priceInRupiah = price.match(/IDR\s*([\d.]+)/i);
+  return priceInRupiah
+    ? Number(priceInRupiah[1].replace(/\./g, ""))
+    : 0;
+}
+
+function getMinimumTravelers(tour?: Tour) {
+  const minimum = tour?.minimum?.match(/\d+/);
+  return minimum ? Number(minimum[0]) : 1;
+}
 
 export default function BookingPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -28,12 +28,12 @@ export default function BookingPage() {
   const [travelers, setTravelers] = useState(2);
 
   const selectedTourData = useMemo(
-    () => tours.find((tour) => tour.name === selectedTour),
+    () => tours.find((tour) => tour.slug === selectedTour),
     [selectedTour]
   );
 
   const estimatedTotal = selectedTourData
-    ? selectedTourData.price * travelers
+    ? getPriceAmount(selectedTourData.price) * travelers
     : 0;
 
   function formatPrice(price: number) {
@@ -46,7 +46,43 @@ export default function BookingPage() {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const tourSlug = String(formData.get("tour") ?? "");
+    const tour = tours.find((item) => item.slug === tourSlug);
+    const travelerCount = Number(formData.get("travelers"));
+
+    if (!tour || travelerCount < getMinimumTravelers(tour)) return;
+
+    const message = [
+      "Hello Awesome Tour,",
+      "",
+      "I would like to make a booking request:",
+      "",
+      `Tour: ${tour.title}`,
+      `Travelers: ${travelerCount}`,
+      `Full Name: ${String(formData.get("name") ?? "")}`,
+      `Email: ${String(formData.get("email") ?? "")}`,
+      `WhatsApp: ${String(formData.get("whatsapp") ?? "")}`,
+      "",
+      "Message:",
+      String(formData.get("message") ?? ""),
+      "",
+      "Please let me know the availability and next steps for this tour.",
+      "",
+      "Thank you.",
+    ].join("\n");
+
     setSubmitted(true);
+    window.location.href =
+      `https://wa.me/6282147314910?text=${encodeURIComponent(message)}`;
+  }
+
+  function handleTourChange(slug: string) {
+    const tour = tours.find((item) => item.slug === slug);
+    setSelectedTour(slug);
+    setTravelers((current) =>
+      Math.max(current, getMinimumTravelers(tour))
+    );
   }
 
   function handleReset() {
@@ -156,7 +192,7 @@ export default function BookingPage() {
                         name="tour"
                         value={selectedTour}
                         onChange={(event) =>
-                          setSelectedTour(event.target.value)
+                          handleTourChange(event.target.value)
                         }
                         required
                       >
@@ -165,8 +201,9 @@ export default function BookingPage() {
                         </option>
 
                         {tours.map((tour) => (
-                          <option key={tour.name} value={tour.name}>
-                            {tour.name} — {tour.duration}
+                          <option key={tour.slug} value={tour.slug}>
+                            {tour.title} — {tour.duration}
+                            {tour.minimum ? ` · Min. ${tour.minimum}` : ""}
                           </option>
                         ))}
                       </select>
@@ -195,8 +232,9 @@ export default function BookingPage() {
                         }
                       >
                         {Array.from(
-                          { length: 10 },
-                          (_, index) => index + 1
+                          { length: 11 - getMinimumTravelers(selectedTourData) },
+                          (_, index) =>
+                            getMinimumTravelers(selectedTourData) + index
                         ).map((number) => (
                           <option key={number} value={number}>
                             {number}{" "}
@@ -306,7 +344,7 @@ export default function BookingPage() {
                 <>
                   <div className={styles.summaryRow}>
                     <span>Journey</span>
-                    <strong>{selectedTourData.name}</strong>
+                    <strong>{selectedTourData.title}</strong>
                   </div>
 
                   <div className={styles.summaryRow}>
@@ -321,7 +359,9 @@ export default function BookingPage() {
 
                   <div className={styles.summaryRow}>
                     <span>From / person</span>
-                    <strong>{formatPrice(selectedTourData.price)}</strong>
+                    <strong>
+                      {formatPrice(getPriceAmount(selectedTourData.price))}
+                    </strong>
                   </div>
 
                   <div className={styles.totalRow}>

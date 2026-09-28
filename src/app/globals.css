@@ -3527,9 +3527,9 @@ h2 {
 /* Home hero: keep its mobile content and footer inside a balanced viewport. */
 @media (max-width: 850px) {
   main > .hero {
-    width: 100%;
+    width: auto;
     max-width: none;
-    margin-inline: 0;
+    margin-inline: calc(50% - 50vw);
     box-sizing: border-box;
     min-height: 100svh;
     min-height: 100dvh;

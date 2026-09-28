@@ -9,8 +9,7 @@ const experiences = [
     subtitle: "Above the ordinary.",
     description:
       "Walk through the highlands of Lombok, meet mountain communities and experience the landscape around Mount Rinjani at a slower pace.",
-    image:
-      "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1800&q=90",
+    image: "/images/expeditions/rinjani-mountain.jpg",
   },
   {
     number: "02",
@@ -19,8 +18,7 @@ const experiences = [
     subtitle: "Into clear blue water.",
     description:
       "Swim above coral gardens, explore quiet beaches and spend an unhurried day moving between the Gili Islands.",
-    image:
-      "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1800&q=90",
+    image: "/images/expeditions/gili-trawangan-drone.jpg",
   },
   {
     number: "03",
@@ -29,8 +27,7 @@ const experiences = [
     subtitle: "Closer to the island.",
     description:
       "Discover traditional villages, local crafts, food and stories that reveal another side of Lombok beyond the main tourist routes.",
-    image:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=90",
+    image: "/images/expeditions/benang-kelambu.jpg",
   },
   {
     number: "04",
