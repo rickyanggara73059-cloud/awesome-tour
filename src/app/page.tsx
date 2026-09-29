@@ -47,6 +47,19 @@ export default function Home() {
   return (
     <main>
       <section className="hero">
+        <video
+          className="heroVideo"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/image/hero/hero-01.jpg"
+          aria-hidden="true"
+          tabIndex={-1}
+        >
+          <source src="/videos/lombok-hero-dji-web.mp4" type="video/mp4" />
+        </video>
+
         <div className="heroContent">
           <p className="eyebrow">LOMBOK · WEST NUSA TENGGARA</p>
 
