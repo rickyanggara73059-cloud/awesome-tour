@@ -3439,10 +3439,18 @@ h2 {
 
 /* Mobile navigation visibility and contrast */
 @media (max-width: 850px) {
+  main:has(> .hero) {
+    overflow-x: clip;
+  }
+
   .nav {
     z-index: 1000;
     box-sizing: border-box;
-    width: calc(100% - 28px);
+    left: clamp(10px, 3.5vw, 14px);
+    right: clamp(10px, 3.5vw, 14px);
+    width: auto;
+    max-width: calc(100vw - 20px);
+    transform: none;
     min-height: 60px;
     padding: 8px 10px 8px 18px;
     background: rgba(15, 35, 38, 0.94) !important;
@@ -3528,7 +3536,10 @@ h2 {
 
 @media (max-width: 360px) {
   .nav {
-    width: calc(100% - 20px);
+    left: 10px;
+    right: 10px;
+    width: auto;
+    max-width: calc(100vw - 20px);
     padding-left: 12px;
   }
 

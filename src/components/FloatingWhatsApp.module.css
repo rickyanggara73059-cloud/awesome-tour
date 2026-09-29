@@ -2,6 +2,9 @@
   position: fixed;
   right: max(20px, env(safe-area-inset-right));
   bottom: max(20px, env(safe-area-inset-bottom));
+  box-sizing: border-box;
+  width: max-content;
+  max-width: calc(100vw - 24px);
   z-index: 900;
   display: flex;
   flex-direction: column;
@@ -68,8 +71,9 @@
 
 @media (max-width: 480px) {
   .stack {
-    right: max(16px, env(safe-area-inset-right));
-    bottom: max(16px, env(safe-area-inset-bottom));
+    right: max(12px, env(safe-area-inset-right, 0px));
+    bottom: max(16px, env(safe-area-inset-bottom, 0px));
+    max-width: calc(100vw - 24px);
     gap: 8px;
   }
 
